@@ -1,13 +1,12 @@
-# [package]
-# name = "coreutils"
-# version = "0.1.0"
-# edition = "2021"
-
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-
 [workspace]
+
 resolver = "2"
-members = [
+members = [ 
+    "whoami",
     "yes",
 ]
+
+[workspace.dependencies]
+libc = { version = "0.2.153", features = ["extra_traits"]}
